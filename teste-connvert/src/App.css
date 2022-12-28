@@ -1,0 +1,147 @@
+.App {
+  text-align:center;
+  height: 100%;
+
+}
+
+.area{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.form {
+  border:3px solid #F6FFFF;
+  font-family: "Segoe UI";
+  width: 1000px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #131629;
+  opacity: 95%;
+}
+
+.firstContent{
+  display: flex;
+  flex-direction: column;
+  color: #F6FFFF;
+  gap: 24px;
+}
+
+.firstContent > label{
+  align-self: flex-start;
+}
+
+.firstContent > div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.secondContent{
+  display: flex;
+  color: #F6FFFF;
+  gap: 24px;
+}
+
+.secondContent > div{
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.secondContent > input{
+  width:100%;
+}
+
+.button {
+  align-self: flex-end;
+  background-color: #65697c;
+  border: 2px solid #F6FFFF;
+  color: #F6FFFF;
+  border-radius: 0px 20px 20px 0px;
+  width: 8%
+}
+
+.buttonReturn{
+  align-self: flex-start;
+  background-color: #65697c;
+  border: 2px solid #F6FFFF;
+  color: #F6FFFF;
+  border-radius: 20px 0px 0px 20px;
+  width: 8%
+}
+
+.buttonFinish{
+  align-self: flex-end;
+  background-color: #65697c;
+  border: 2px solid #F6FFFF;
+  color: #F6FFFF;
+  border-radius: 0px 20px 20px 0px;
+  width: 8%
+}
+
+.buttonsEnd{
+  display: flex;
+  justify-content: space-between;
+}
+
+#placeholder {
+  text-align: center;
+  font-family: "Segoe UI";
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  background-color: #F6FFFF;
+  text-align: center;
+  color: #65697c;
+  border:3px groove #F6FFFF;
+  padding: 15px;
+  border-radius: 15px;
+  align-self: flex-start;
+}
+
+.labelDiv > select{
+  align-self: flex-start;
+  width: 100%;
+}
+
+.formEnd{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.formEnd > h1{
+  align-self: center;
+}
+
+.errorMsg {
+  color: red;
+}
+
+.information{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F6FFFF;
+  color: #65697c;
+  border:3px groove #F6FFFF;
+  padding: 15px;
+  border-radius: 15px;
+}
