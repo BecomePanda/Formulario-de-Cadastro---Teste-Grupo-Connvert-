@@ -24,6 +24,7 @@ export default function FormStepTwo({ setScreen }) {
   };
 
   const saveDataStepTwo = (event) => {
+    event.preventDefault();
     const stepOneInformations = JSON.parse(localStorage.getItem("FormData"));
     localStorage.setItem(
       "FormData",
@@ -41,32 +42,32 @@ export default function FormStepTwo({ setScreen }) {
 
     {
       label: "Caminhoneiro",
-      value: 1,
+      value: "Caminhoneiro",
     },
 
     {
       label: "Professor",
-      value: 2,
+      value: "Professor",
     },
 
     {
       label: "Advogado",
-      value: 3,
+      value: "Advogado",
     },
 
     {
       label: "Auxiliar de Limpeza",
-      value: 4,
+      value: "Auxiliar de Limpeza",
     },
 
     {
       label: "Auxiliar de Cozinha",
-      value: 5,
+      value: "Auxiliar de Cozinha",
     },
 
     {
       label: "Lenhador",
-      value: 6,
+      value: "Lenhador",
     },
   ];
 
@@ -83,7 +84,6 @@ export default function FormStepTwo({ setScreen }) {
                 name="Born"
                 value={date}
                 type="date"
-                maxDate={new Date()}
                 id="placeholder"
                 required
                 onChange={(event) => setDate(event.target.value)}

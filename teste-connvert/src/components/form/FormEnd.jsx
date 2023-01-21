@@ -56,7 +56,7 @@ export default function FormEnd({ setScreen }) {
       <h1 className="title"> Cadastro efetuado com sucesso!</h1>
       <div className="information">
         {formattedResults.map((result) => (
-          <div>
+          <div key={result.label}>
             <span>
               {result.label}: {result.value}{" "}
             </span>
