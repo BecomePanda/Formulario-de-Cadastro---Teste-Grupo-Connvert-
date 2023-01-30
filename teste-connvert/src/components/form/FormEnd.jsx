@@ -19,7 +19,7 @@ export default function FormEnd({ setScreen }) {
       date,
       phone,
       profession,
-      gender,
+      gender
     )
   );
   const formattedResults = [
@@ -55,7 +55,6 @@ export default function FormEnd({ setScreen }) {
       label: "Gênero",
       value: showResults.gender,
     },
-
   ];
 
   return (
@@ -69,6 +68,13 @@ export default function FormEnd({ setScreen }) {
             </span>
           </div>
         ))}
+      </div>
+
+      <div>
+        <button className="buttonReset" onClick={() => setScreen(0)}>
+          {" "}
+          Voltar ao Início{" "}
+        </button>
       </div>
     </div>
   );

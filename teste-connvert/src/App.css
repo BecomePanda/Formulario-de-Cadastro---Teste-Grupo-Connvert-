@@ -143,6 +143,16 @@
   background-color: #F6FFFF;
   color: #65697c;
   border:3px groove #F6FFFF;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
+}
+
+.buttonReset{
+  align-self: flex-end;
+  margin-top: 10px;
+  background-color: #65697c;
+  border: 2px solid #F6FFFF;
+  color: #F6FFFF;
+  border-radius: 20px;
+  width: 100%
 }
