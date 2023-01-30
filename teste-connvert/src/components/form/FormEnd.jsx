@@ -6,6 +6,7 @@ import renda from "./FormStepOne";
 import date from "./FormStepTwo";
 import phone from "./FormStepTwo";
 import profession from "./FormStepTwo";
+import gender from "./FormStepTwo";
 
 export default function FormEnd({ setScreen }) {
   const showResults = JSON.parse(
@@ -17,7 +18,8 @@ export default function FormEnd({ setScreen }) {
       renda,
       date,
       phone,
-      profession
+      profession,
+      gender,
     )
   );
   const formattedResults = [
@@ -49,6 +51,11 @@ export default function FormEnd({ setScreen }) {
       label: "Profissão",
       value: showResults.profession,
     },
+    {
+      label: "Gênero",
+      value: showResults.gender,
+    },
+
   ];
 
   return (

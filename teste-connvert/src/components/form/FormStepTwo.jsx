@@ -7,6 +7,7 @@ export default function FormStepTwo({ setScreen }) {
   const [phone, setPhone] = useState("");
   const [errorPhone, setErrorPhone] = useState("");
   const [profession, setProfession] = useState("");
+  const [gender, setGender] = useState("");
 
   const handlePhoneChange = (value) => {
     const { isValid, errorMessage } = validatePhone(value);
@@ -28,7 +29,13 @@ export default function FormStepTwo({ setScreen }) {
     const stepOneInformations = JSON.parse(localStorage.getItem("FormData"));
     localStorage.setItem(
       "FormData",
-      JSON.stringify({ ...stepOneInformations, date, phone, profession })
+      JSON.stringify({
+        ...stepOneInformations,
+        date,
+        phone,
+        profession,
+        gender,
+      })
     );
 
     setScreen(2);
@@ -71,6 +78,38 @@ export default function FormStepTwo({ setScreen }) {
     },
   ];
 
+  const genders = [
+    {
+      label: "< Como você se identifica? >",
+      value: 0,
+    },
+
+    {
+      label: "Masculino",
+      value: "Masculino",
+    },
+
+    {
+      label: "Feminino",
+      value: "Feminino",
+    },
+
+    {
+      label: "Não-Binário",
+      value: "Não-Binário",
+    },
+
+    {
+      label: "Transgênero",
+      value: "Transgênero",
+    },
+
+    {
+      label: "Prefiro não dizer",
+      value: "Prefiro não dizer",
+    },
+  ];
+
   return (
     <div className="area">
       <form className="form" onSubmit={saveDataStepTwo}>
@@ -83,6 +122,7 @@ export default function FormStepTwo({ setScreen }) {
               <input
                 name="Born"
                 value={date}
+                max={new Date().toISOString().slice(0,10)}
                 type="date"
                 id="placeholder"
                 required
@@ -115,6 +155,24 @@ export default function FormStepTwo({ setScreen }) {
                 {professions.map((profession) => (
                   <option key={profession.label} value={profession.value}>
                     {profession.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="labelDiv">
+              <label> Gênero: </label>
+              <select
+                name="Gender"
+                value={gender}
+                id="gender"
+                form="genders-form"
+                required
+                onChange={(event) => setGender(event.target.value)}
+              >
+                {genders.map((gender) => (
+                  <option key={gender.label} value={gender.value} >
+                    {gender.label}
                   </option>
                 ))}
               </select>
