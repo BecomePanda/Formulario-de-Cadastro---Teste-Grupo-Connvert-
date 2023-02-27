@@ -105,3 +105,4 @@ export function validatePhone(value) {
     errorMessage: validPhone ? "" : "Telefone inválido!",
   };
 }
+

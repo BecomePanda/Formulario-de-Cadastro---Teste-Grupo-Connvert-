@@ -7,6 +7,11 @@ import date from "./FormStepTwo";
 import phone from "./FormStepTwo";
 import profession from "./FormStepTwo";
 import gender from "./FormStepTwo";
+import cep from "./FormStepTwo";
+import address from "./FormStepTwo";
+import neighborhood from "./FormStepTwo";
+import city from "./FormStepTwo";
+import uf from "./FormStepTwo";
 
 export default function FormEnd({ setScreen }) {
   const showResults = JSON.parse(
@@ -19,7 +24,12 @@ export default function FormEnd({ setScreen }) {
       date,
       phone,
       profession,
-      gender
+      gender,
+      cep,
+      address,
+      neighborhood,
+      city,
+      uf,
     )
   );
   const formattedResults = [
@@ -54,6 +64,26 @@ export default function FormEnd({ setScreen }) {
     {
       label: "Gênero",
       value: showResults.gender,
+    },
+    {
+      label: "CEP",
+      value: showResults.cep,
+    },
+    {
+      label: "Endereço",
+      value: showResults.address,
+    },
+    {
+      label: "Bairro",
+      value: showResults.neighborhood,
+    },
+    {
+      label: "Cidade",
+      value: showResults.city,
+    },
+    {
+      label: "Estado",
+      value: showResults.uf,
     },
   ];
 

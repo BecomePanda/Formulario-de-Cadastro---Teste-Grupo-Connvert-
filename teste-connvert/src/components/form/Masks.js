@@ -30,7 +30,7 @@ export function moneyMask(value) {
     newValue = newValue.replace(/(\d+)(\d{3})([.,\d]+)$/, "$1.$2$3");
   }
 
-  return newValue
+  return newValue;
 }
 
 export function phoneMask(value) {
@@ -38,7 +38,7 @@ export function phoneMask(value) {
     return "";
   }
   let newValue = clearStringOnlyNumbers(value);
-  if(newValue.length >= 11){
+  if (newValue.length >= 11) {
     newValue = newValue.substring(0, 11);
   }
 
@@ -48,3 +48,4 @@ export function phoneMask(value) {
 
   return newValue;
 }
+
