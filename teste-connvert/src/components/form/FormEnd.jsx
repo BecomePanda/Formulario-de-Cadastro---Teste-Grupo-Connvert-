@@ -9,6 +9,7 @@ import profession from "./FormStepTwo";
 import gender from "./FormStepTwo";
 import cep from "./FormStepTwo";
 import address from "./FormStepTwo";
+import addressNumber from "./FormStepTwo";
 import neighborhood from "./FormStepTwo";
 import city from "./FormStepTwo";
 import uf from "./FormStepTwo";
@@ -27,6 +28,7 @@ export default function FormEnd({ setScreen }) {
       gender,
       cep,
       address,
+      addressNumber,
       neighborhood,
       city,
       uf,
@@ -72,6 +74,10 @@ export default function FormEnd({ setScreen }) {
     {
       label: "Endereço",
       value: showResults.address,
+    },
+    {
+      label: "Número",
+      value: showResults.addressNumber,
     },
     {
       label: "Bairro",

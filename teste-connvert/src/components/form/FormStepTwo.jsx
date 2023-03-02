@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { phoneMask } from "./Masks";
-import { validatePhone } from "./Validation";
-
+import { phoneMask, cepMask } from "./Masks";
+import { validatePhone, validateCEP } from "./Validation";
 
 export default function FormStepTwo({ setScreen }) {
   const [date, setDate] = useState("");
@@ -10,7 +9,9 @@ export default function FormStepTwo({ setScreen }) {
   const [profession, setProfession] = useState("");
   const [gender, setGender] = useState("");
   const [cep, setCep] = useState("");
+  const [errorCEP, setErrorCEP] = useState("");
   const [address, setAddress] = useState("");
+  const [addressNumber, setAddressNumber] = useState("");
   const [neighborhood, setNeighborhood] = useState("");
   const [city, setCity] = useState("");
   const [uf, setUf] = useState("");
@@ -30,15 +31,32 @@ export default function FormStepTwo({ setScreen }) {
     setPhone(phoneMask(value));
   };
 
+  const handleCepChange = (value) => {
+    const { isValid, errorMessage } = validateCEP(value);
+    if (value) {
+      if (!isValid) {
+        setErrorCEP(errorMessage);
+      } else {
+        setErrorCEP(null);
+      }
+    } else {
+      setErrorCEP(null);
+    }
+    
+    setCep(cepMask(value));
+    
+    };
+
   const checkCEP = (e) => {
     const getCep = e.target.value;
     fetch(`https://viacep.com.br/ws/${getCep}/json/`)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setAddress(data.logradouro);
         setNeighborhood(data.bairro);
         setCity(data.localidade);
         setUf(data.uf);
+        /* setFocus('number'); */
       });
   };
 
@@ -55,6 +73,7 @@ export default function FormStepTwo({ setScreen }) {
         gender,
         cep,
         address,
+        addressNumber,
         neighborhood,
         city,
         uf,
@@ -202,8 +221,8 @@ export default function FormStepTwo({ setScreen }) {
             </div>
           </div>
 
-          <div className="secondContent">
-          <div>
+          <div className="addressContent">
+            <div className="labelContent">
               <label> CEP: </label>
               <input
                 name="Cep"
@@ -211,12 +230,13 @@ export default function FormStepTwo({ setScreen }) {
                 id="cep"
                 placeholder="Digite seu CEP"
                 form="cep-form"
-                onChange={(event) => setCep(event.target.value)}
+                onChange={(event) => handleCepChange(event.target.value)}
                 onBlur={checkCEP}
               />
+              {errorCEP && <span className="errorMsg">{errorCEP}</span>}
             </div>
 
-            <div>
+            <div className="labelContent">
               <label> Endereço: </label>
               <input
                 name="Address"
@@ -226,19 +246,21 @@ export default function FormStepTwo({ setScreen }) {
                 onChange={(event) => setAddress(event.target.value)}
               />
             </div>
+          </div>
 
-            {/* <div>
+          <div className="addressContent">
+            <div className="labelContent">
               <label> Número: </label>
               <input
                 name="Number"
-                value="number"
+                value={addressNumber}
                 id="number"
                 form="number-form"
-
+                onChange={(event) => setAddressNumber(event.target.value)}
               />
-            </div> */}
+            </div>
 
-            <div>
+            <div className="labelContent">
               <label> Bairro: </label>
               <input
                 name="Neighbourhood"
@@ -248,8 +270,10 @@ export default function FormStepTwo({ setScreen }) {
                 onChange={(event) => setNeighborhood(event.target.value)}
               />
             </div>
+          </div>
 
-            <div>
+          <div className="addressContent">
+            <div className="labelContent">
               <label> Cidade: </label>
               <input
                 name="City"
@@ -260,7 +284,7 @@ export default function FormStepTwo({ setScreen }) {
               />
             </div>
 
-            <div>
+            <div className="labelContent">
               <label> Estado: </label>
               <input
                 name="UF"
@@ -270,7 +294,6 @@ export default function FormStepTwo({ setScreen }) {
                 onChange={(event) => setUf(event.target.value)}
               />
             </div>
-
           </div>
 
           <div className="buttonsEnd">

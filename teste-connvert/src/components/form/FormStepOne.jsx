@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { cpfMask, moneyMask } from "./Masks";
-import { validateCpf, validateMail } from "./Validation";
+import { validateCpf, validateMail} from "./Validation";
 
 export default function FormStepOne({ setScreen }) {
   const [name, setName] = useState("");

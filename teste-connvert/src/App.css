@@ -1,10 +1,9 @@
 .App {
-  text-align:center;
+  text-align: center;
   height: 100%;
-
 }
 
-.area{
+.area {
   height: 100%;
   width: 100%;
   display: flex;
@@ -15,7 +14,7 @@
 }
 
 .form {
-  border:3px solid #F6FFFF;
+  border: 3px solid #f6ffff;
   font-family: "Segoe UI";
   width: 1000px;
   padding: 16px;
@@ -24,70 +23,111 @@
   opacity: 95%;
 }
 
-.firstContent{
+.firstContent {
   display: flex;
   flex-direction: column;
-  color: #F6FFFF;
+  color: #f6ffff;
   gap: 24px;
 }
 
-.firstContent > label{
+.firstContent > label {
   align-self: flex-start;
 }
 
-.firstContent > div{
+.firstContent > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.secondContent{
+.secondContent {
   display: flex;
-  color: #F6FFFF;
+  color: #f6ffff;
   gap: 24px;
 }
 
-.secondContent > div{
+.secondContent > div {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: flex-start;
   flex: 1;
 }
 
-.secondContent > input{
-  width:100%;
+.addressContent {
+  display: flex;
+  color: #f6ffff;
+  gap: 24px;
+}
+
+.addressContent > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.labelContent{
+  align-items: flex-start;
+}
+
+.labelContent > input{
+  width:98%;
 }
 
 .button {
   align-self: flex-end;
+  position: relative;
+  cursor: pointer;
   background-color: #65697c;
-  border: 2px solid #F6FFFF;
-  color: #F6FFFF;
+  border: 2px solid #f6ffff;
+  color: #f6ffff;
   border-radius: 0px 20px 20px 0px;
-  width: 8%
+  width: 8%;
+  transition: all 400ms ease;
 }
 
-.buttonReturn{
+.buttonReturn {
   align-self: flex-start;
+  position: relative;
+  cursor: pointer;
   background-color: #65697c;
-  border: 2px solid #F6FFFF;
-  color: #F6FFFF;
+  border: 2px solid #f6ffff;
+  color: #f6ffff;
   border-radius: 20px 0px 0px 20px;
-  width: 8%
+  width: 8%;
+  transition: all 400ms ease;
 }
 
-.buttonFinish{
+.buttonFinish {
   align-self: flex-end;
+  position: relative;
+  cursor: pointer;
   background-color: #65697c;
-  border: 2px solid #F6FFFF;
-  color: #F6FFFF;
+  border: 2px solid #f6ffff;
+  color: #f6ffff;
   border-radius: 0px 20px 20px 0px;
-  width: 8%
+  width: 8%;
+  transition: all 400ms ease;
 }
 
-.buttonsEnd{
+.buttonsEnd {
   display: flex;
+  position: relative;
+  cursor: pointer;
   justify-content: space-between;
+  transition: all 400ms ease;
+}
+
+.buttonReset {
+  align-self: flex-end;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #65697c;
+  border: 2px solid #f6ffff;
+  color: #f6ffff;
+  border-radius: 20px;
+  width: 100%;
+  transition: all 400ms ease;
 }
 
 #placeholder {
@@ -96,6 +136,26 @@
   width: 100%;
 }
 
+/* .effect {
+  background-color: #28348A;
+}
+
+.effect::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 8%;
+  height: 80px;
+  background: rgba (255, 255, 255, 0.3);
+  border-radius: 0px 20px 20px 0px;
+  transition: all 2s ease;
+}
+
+.effect:hover::before {
+  width: 100%;
+} */
+
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -103,21 +163,21 @@
 }
 
 .title {
-  background-color: #F6FFFF;
+  background-color: #f6ffff;
   text-align: center;
   color: #65697c;
-  border:3px groove #F6FFFF;
+  border: 3px groove #f6ffff;
   padding: 15px;
   border-radius: 15px;
   align-self: flex-start;
 }
 
-.labelDiv > select{
+.labelDiv > select {
   align-self: flex-start;
   width: 100%;
 }
 
-.formEnd{
+.formEnd {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -128,7 +188,7 @@
   width: 100%;
 }
 
-.formEnd > h1{
+.formEnd > h1 {
   align-self: center;
 }
 
@@ -136,23 +196,14 @@
   color: red;
 }
 
-.information{
+.information {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #F6FFFF;
+  background-color: #f6ffff;
   color: #65697c;
-  border:3px groove #F6FFFF;
+  border: 3px groove #f6ffff;
   padding: 20px;
   border-radius: 15px;
 }
 
-.buttonReset{
-  align-self: flex-end;
-  margin-top: 10px;
-  background-color: #65697c;
-  border: 2px solid #F6FFFF;
-  color: #F6FFFF;
-  border-radius: 20px;
-  width: 100%
-}

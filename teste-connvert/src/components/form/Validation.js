@@ -106,3 +106,15 @@ export function validatePhone(value) {
   };
 }
 
+export function validateCEP(value) {
+  if (!value) {
+    return { isValid: false, errorMessage: "Digite um CEP válido!" };
+  }
+  const cepWithoutMask = removeMask(value);
+  const validCEP = cepWithoutMask && cepWithoutMask.lenght >= 8;
+
+  return {
+    isValid: validCEP,
+    errorMessage: validCEP ? "" : "CEP Inválido!",
+  };
+}

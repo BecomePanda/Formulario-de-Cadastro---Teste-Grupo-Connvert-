@@ -16,6 +16,20 @@ export function cpfMask(value) {
   return newValue;
 }
 
+export function cepMask(value) {
+  if (!value) {
+    return "";
+  }
+  let newValue = clearStringOnlyNumbers(value);
+  if (newValue.lenght > 8) {
+    newValue = newValue.substring(0, 8);
+  }
+  newValue = newValue.replace(/(\d{5})(\d)/, "$1-$2");
+  newValue = newValue.replace(/(-\d{3})\d+?$/, "$1");
+
+  return newValue;
+}
+
 export function moneyMask(value) {
   if (!value) {
     return "";
@@ -48,4 +62,3 @@ export function phoneMask(value) {
 
   return newValue;
 }
-
