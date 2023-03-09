@@ -111,8 +111,8 @@ export function validateCEP(value) {
     return { isValid: false, errorMessage: "Digite um CEP válido!" };
   }
   const cepWithoutMask = removeMask(value);
-  const validCEP = cepWithoutMask && cepWithoutMask.lenght >= 8;
-
+  const validCEP = cepWithoutMask && cepWithoutMask.length >= 8;
+  
   return {
     isValid: validCEP,
     errorMessage: validCEP ? "" : "CEP Inválido!",

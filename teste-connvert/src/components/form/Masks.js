@@ -21,7 +21,7 @@ export function cepMask(value) {
     return "";
   }
   let newValue = clearStringOnlyNumbers(value);
-  if (newValue.lenght > 8) {
+  if (newValue.length > 8) {
     newValue = newValue.substring(0, 8);
   }
   newValue = newValue.replace(/(\d{5})(\d)/, "$1-$2");

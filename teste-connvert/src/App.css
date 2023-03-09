@@ -136,26 +136,6 @@
   width: 100%;
 }
 
-/* .effect {
-  background-color: #28348A;
-}
-
-.effect::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 8%;
-  height: 80px;
-  background: rgba (255, 255, 255, 0.3);
-  border-radius: 0px 20px 20px 0px;
-  transition: all 2s ease;
-}
-
-.effect:hover::before {
-  width: 100%;
-} */
-
 .formContainer {
   display: flex;
   flex-direction: column;

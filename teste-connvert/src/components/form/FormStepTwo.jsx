@@ -49,6 +49,7 @@ export default function FormStepTwo({ setScreen }) {
 
   const checkCEP = (e) => {
     const getCep = e.target.value;
+    const inputNumber = document.getElementById('number');
     fetch(`https://viacep.com.br/ws/${getCep}/json/`)
       .then((res) => res.json())
       .then((data) => {
@@ -56,7 +57,7 @@ export default function FormStepTwo({ setScreen }) {
         setNeighborhood(data.bairro);
         setCity(data.localidade);
         setUf(data.uf);
-        /* setFocus('number'); */
+        inputNumber.focus();
       });
   };
 
