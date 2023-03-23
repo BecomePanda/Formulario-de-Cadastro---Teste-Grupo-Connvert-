@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { cpfMask, moneyMask } from "./Masks";
-import { validateCpf, validateMail} from "./Validation";
+import { validateCpf, validateMail } from "./Validation";
 
 export default function FormStepOne({ setScreen }) {
   const [name, setName] = useState("");
@@ -56,13 +56,15 @@ export default function FormStepOne({ setScreen }) {
 
   return (
     <div className="area">
-      <form className="form" onSubmit={saveData}>
-        <h1 className="title"> Área do Usuário </h1>
-
+      <div className="title">
+        {" "}
+        <div className="titleDiv">Área do Usuário</div>
+      </div>
+      <form className="form right-panel" onSubmit={saveData}>
         <div className="formContainer">
           <div className="firstContent">
             <div>
-              <label> Nome Completo: </label>
+              <label> Nome: </label>
               <input
                 name="Name"
                 value={name}
@@ -108,7 +110,7 @@ export default function FormStepOne({ setScreen }) {
                 value={renda}
                 id="placeholder"
                 required
-                placeholder="Valor de sua renda principal"
+                placeholder="Valor de sua renda"
                 onChange={(event) => handleMoneyChange(event.target.value)}
               />
             </div>
@@ -118,6 +120,18 @@ export default function FormStepOne({ setScreen }) {
             {" "}
             Próximo{" "}
           </button>
+          <p className="copyright">
+            Designed by
+            <a
+              href="https://github.com/BecomePanda"
+              className="a"
+              target="_blank"
+              title="BecomePanda"
+            >
+              {" "}
+              BecomePanda
+            </a>
+          </p>
         </div>
       </form>
     </div>

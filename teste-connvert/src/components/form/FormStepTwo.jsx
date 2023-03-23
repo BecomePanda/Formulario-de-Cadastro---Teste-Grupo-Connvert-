@@ -42,14 +42,13 @@ export default function FormStepTwo({ setScreen }) {
     } else {
       setErrorCEP(null);
     }
-    
+
     setCep(cepMask(value));
-    
-    };
+  };
 
   const checkCEP = (e) => {
     const getCep = e.target.value;
-    const inputNumber = document.getElementById('number');
+    const inputNumber = document.getElementById("number");
     fetch(`https://viacep.com.br/ws/${getCep}/json/`)
       .then((res) => res.json())
       .then((data) => {
@@ -155,9 +154,11 @@ export default function FormStepTwo({ setScreen }) {
 
   return (
     <div className="area">
-      <form className="form" onSubmit={saveDataStepTwo}>
-        <h1 className="title"> Me fale mais sobre você: </h1>
-
+      <div className="title2">
+        {" "}
+        <div className="titleDiv">Me fale mais sobre você</div>
+      </div>
+      <form className="form right-panel" onSubmit={saveDataStepTwo}>
         <div className="formContainer">
           <div className="firstContent">
             <div>
@@ -297,7 +298,7 @@ export default function FormStepTwo({ setScreen }) {
             </div>
           </div>
 
-          <div className="buttonsEnd">
+          <div className="buttonsEndDiv">
             <button className="buttonReturn" onClick={() => setScreen(0)}>
               {" "}
               Voltar{" "}
@@ -307,6 +308,17 @@ export default function FormStepTwo({ setScreen }) {
               Finalizar{" "}
             </button>
           </div>
+          <p className="copyright">
+            Designed by
+            <a
+              href="https://github.com/BecomePanda"
+              className="a"
+              title="BecomePanda"
+            >
+              {" "}
+              BecomePanda
+            </a>
+          </p>
         </div>
       </form>
     </div>

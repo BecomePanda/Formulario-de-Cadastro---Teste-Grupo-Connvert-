@@ -1,26 +1,100 @@
 .App {
-  text-align: center;
   height: 100%;
 }
 
-.area {
+/* .area {
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  flex-direction: column;
+} */
+
+.areaEnd, .area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30vh;
+}
+
+.areaEnd > div{
+  height: 100%;
+  background-color: #FFF;  
+  border: 2px solid #006699;
+}
+
+.right-panel {
+  height: 100%;
+}
+
+/* .title {
+  display: flex;
+  justify-content: center;
+  background-color: #f6ffff;
+  width: 15%;
+  height: 29.2%;
+  padding: 20px;
+  color: #131629;
+  border: 2px solid #006699;
+  border-radius: 0px 0px 0px 40px;
+  background-image: url("./images/panda-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title2 {
+  display: flex;
+  justify-content: center;
+  background-color: #f6ffff;
+  width: 15%;
+  height: 56.8%;
+  padding: 15px;
+  color: #131629;
+  border: 2px solid #006699;
+  border-radius: 0px 0px 0px 40px;
+  background-image: url("./images/panda-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.title3, .title2, .title {
+  display: flex;
+  justify-content: center;
+  background-color: #f6ffff;
+  width: 15%;
+  height:100%;
+  border: 2px solid #006699;
+  border-radius: 0px 0px 0px 40px;
+  background-image: url("./images/panda-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.titleDiv {
+  color: solid black;
+  font-weight: bold;
+  position: absolute;
+  bottom: 330px;
 }
 
 .form {
-  border: 3px solid #f6ffff;
+  display: flex;
+  border: 2px solid #006699;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 40px 0px 0px;
   font-family: "Segoe UI";
-  width: 1000px;
-  padding: 16px;
-  border-radius: 10px;
-  background-color: #131629;
-  opacity: 95%;
+  width: 40vw;
+  background-color: #002233;
+  background-image: url("./images/background2.png");
+  background-position: right bottom;
+  opacity: 90%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .firstContent {
@@ -28,16 +102,6 @@
   flex-direction: column;
   color: #f6ffff;
   gap: 24px;
-}
-
-.firstContent > label {
-  align-self: flex-start;
-}
-
-.firstContent > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .secondContent {
@@ -49,7 +113,6 @@
 .secondContent > div {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex: 1;
 }
 
@@ -65,69 +128,8 @@
   flex: 1;
 }
 
-.labelContent{
-  align-items: flex-start;
-}
-
-.labelContent > input{
-  width:98%;
-}
-
-.button {
-  align-self: flex-end;
-  position: relative;
-  cursor: pointer;
-  background-color: #65697c;
-  border: 2px solid #f6ffff;
-  color: #f6ffff;
-  border-radius: 0px 20px 20px 0px;
-  width: 8%;
-  transition: all 400ms ease;
-}
-
-.buttonReturn {
-  align-self: flex-start;
-  position: relative;
-  cursor: pointer;
-  background-color: #65697c;
-  border: 2px solid #f6ffff;
-  color: #f6ffff;
-  border-radius: 20px 0px 0px 20px;
-  width: 8%;
-  transition: all 400ms ease;
-}
-
-.buttonFinish {
-  align-self: flex-end;
-  position: relative;
-  cursor: pointer;
-  background-color: #65697c;
-  border: 2px solid #f6ffff;
-  color: #f6ffff;
-  border-radius: 0px 20px 20px 0px;
-  width: 8%;
-  transition: all 400ms ease;
-}
-
-.buttonsEnd {
-  display: flex;
-  position: relative;
-  cursor: pointer;
-  justify-content: space-between;
-  transition: all 400ms ease;
-}
-
-.buttonReset {
-  align-self: flex-end;
-  position: relative;
-  cursor: pointer;
-  margin-top: 10px;
-  background-color: #65697c;
-  border: 2px solid #f6ffff;
-  color: #f6ffff;
-  border-radius: 20px;
-  width: 100%;
-  transition: all 400ms ease;
+.labelContent > input {
+  width: 95%;
 }
 
 #placeholder {
@@ -136,54 +138,118 @@
   width: 100%;
 }
 
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.title {
-  background-color: #f6ffff;
-  text-align: center;
-  color: #65697c;
-  border: 3px groove #f6ffff;
-  padding: 15px;
-  border-radius: 15px;
-  align-self: flex-start;
-}
-
 .labelDiv > select {
-  align-self: flex-start;
   width: 100%;
 }
 
-.formEnd {
+.buttonsEndDiv {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  text-align: left;
-  height: 100%;
-  width: 100%;
+  justify-content: space-between;
 }
 
-.formEnd > h1 {
-  align-self: center;
+.information {
+  text-align: left;
+  color: #65697c;
+  padding: 20px;
+}
+
+.copyright {
+  color: #f6ffff;
+  font-size: 12px;
+  text-align: center;
 }
 
 .errorMsg {
   color: red;
 }
 
-.information {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #f6ffff;
-  color: #65697c;
-  border: 3px groove #f6ffff;
-  padding: 20px;
-  border-radius: 15px;
+.a {
+  color: #f6ffff;
 }
 
+.a > link {
+  color: lightblue;
+}
+
+.a > hover {
+  color: #fcfcfc;
+}
+
+.a > active {
+  color: #c0c0c0;
+}
+
+.button {
+  align-self: flex-end;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #415058;
+  border: 2px solid #f6ffff;
+  border-radius: 0px 20px 20px 0px;
+  color: #f6ffff;
+  width: 40%;
+  transition: all 1s ease;
+}
+
+.button:hover {
+  background-color: #006699;
+  transition: 1s;
+}
+
+.buttonReturn {
+  align-self: flex-start;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #65697c;
+  border: 2px solid #f6ffff;
+  color: #f6ffff;
+  border-radius: 20px 0px 0px 20px;
+  width: 40%;
+  transition: all 1s ease;
+}
+
+.buttonReturn:hover {
+  background-color: orange;
+  transition: 1s;
+}
+
+.buttonFinish {
+  align-self: flex-end;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #65697c;
+  border: 2px solid #f6ffff;
+  color: #f6ffff;
+  border-radius: 0px 20px 20px 0px;
+  width: 40%;
+  transition: all 1s ease;
+}
+
+.buttonFinish:hover {
+  background-color: #006699;
+  transition: 1s;
+}
+
+.buttonReset {
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #65697c;
+  border: 2px solid #f6ffff;
+  color: #f6ffff;
+  border-radius: 5px;
+  width: 35%;
+  transition: all 1s ease;
+}
+
+.buttonReset:hover {
+  background-color: orange;
+  transition: 1s;
+}
+
+.buttonResetDiv {
+  display: flex;
+  justify-content: center;
+}

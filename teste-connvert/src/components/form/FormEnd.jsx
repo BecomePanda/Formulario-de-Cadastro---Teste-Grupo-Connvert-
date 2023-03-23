@@ -31,7 +31,7 @@ export default function FormEnd({ setScreen }) {
       addressNumber,
       neighborhood,
       city,
-      uf,
+      uf
     )
   );
   const formattedResults = [
@@ -94,24 +94,29 @@ export default function FormEnd({ setScreen }) {
   ];
 
   return (
-    <div className="formEnd">
-      <h1 className="title"> Cadastro efetuado com sucesso!</h1>
-      <div className="information">
-        {formattedResults.map((result) => (
-          <div key={result.label}>
-            <span>
-              {result.label}: {result.value}{" "}
-            </span>
+    <>
+      <div className="areaEnd">
+        <div className="title3">
+          <div className="titleDiv">Cadastro efetuado com sucesso!</div>
+        </div>
+        <div>
+          <div className="information">
+            {formattedResults.map((result) => (
+              <div key={result.label}>
+                <span>
+                  {result.label}: {result.value}{" "}
+                </span>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-
-      <div>
+      <div className="buttonResetDiv">
         <button className="buttonReset" onClick={() => setScreen(0)}>
           {" "}
           Voltar ao Início{" "}
         </button>
       </div>
-    </div>
+    </>
   );
 }
