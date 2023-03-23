@@ -99,7 +99,7 @@ export default function FormEnd({ setScreen }) {
         <div className="title3">
           <div className="titleDiv">Cadastro efetuado com sucesso!</div>
         </div>
-        <div>
+        <div className="right-panel">
           <div className="information">
             {formattedResults.map((result) => (
               <div key={result.label}>

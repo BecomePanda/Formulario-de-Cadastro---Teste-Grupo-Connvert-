@@ -9,21 +9,23 @@
   justify-content: center;
 } */
 
-.areaEnd, .area {
+.areaEnd,
+.area {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 30vh;
+  padding-top: 30vh;
+  flex-direction: row;
 }
 
-.areaEnd > div{
-  height: 100%;
-  background-color: #FFF;  
+.areaEnd > div {
+  background-color: #fff;
   border: 2px solid #006699;
 }
 
 .right-panel {
   height: 100%;
+  flex-direction: column;
+  padding: 20px;
 }
 
 /* .title {
@@ -56,12 +58,13 @@
   background-position: center;
 } */
 
-.title3, .title2, .title {
+.title3,
+.title2,
+.title {
   display: flex;
   justify-content: center;
   background-color: #f6ffff;
   width: 15%;
-  height:100%;
   border: 2px solid #006699;
   border-radius: 0px 0px 0px 40px;
   background-image: url("./images/panda-logo.png");
@@ -71,10 +74,10 @@
 }
 
 .titleDiv {
-  color: solid black;
   font-weight: bold;
-  position: absolute;
-  bottom: 330px;
+  padding-top: 8px;
+  width: 100%;
+  text-align: center;
 }
 
 .form {
@@ -128,10 +131,6 @@
   flex: 1;
 }
 
-.labelContent > input {
-  width: 95%;
-}
-
 #placeholder {
   text-align: center;
   font-family: "Segoe UI";
@@ -150,7 +149,6 @@
 .information {
   text-align: left;
   color: #65697c;
-  padding: 20px;
 }
 
 .copyright {

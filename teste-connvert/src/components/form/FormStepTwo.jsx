@@ -161,7 +161,7 @@ export default function FormStepTwo({ setScreen }) {
       <form className="form right-panel" onSubmit={saveDataStepTwo}>
         <div className="formContainer">
           <div className="firstContent">
-            <div>
+            <div className="labelDiv">
               <label> Data de Nascimento: </label>
               <input
                 name="Born"
@@ -174,7 +174,7 @@ export default function FormStepTwo({ setScreen }) {
               />
             </div>
 
-            <div>
+            <div className="labelDiv">
               <label> Telefone: </label>
               <input
                 name="Celphone"
@@ -224,7 +224,7 @@ export default function FormStepTwo({ setScreen }) {
           </div>
 
           <div className="addressContent">
-            <div className="labelContent">
+            <div>
               <label> CEP: </label>
               <input
                 name="Cep"
@@ -238,7 +238,7 @@ export default function FormStepTwo({ setScreen }) {
               {errorCEP && <span className="errorMsg">{errorCEP}</span>}
             </div>
 
-            <div className="labelContent">
+            <div>
               <label> Endereço: </label>
               <input
                 name="Address"
@@ -251,7 +251,7 @@ export default function FormStepTwo({ setScreen }) {
           </div>
 
           <div className="addressContent">
-            <div className="labelContent">
+            <div>
               <label> Número: </label>
               <input
                 name="Number"
@@ -262,7 +262,7 @@ export default function FormStepTwo({ setScreen }) {
               />
             </div>
 
-            <div className="labelContent">
+            <div>
               <label> Bairro: </label>
               <input
                 name="Neighbourhood"
@@ -275,7 +275,7 @@ export default function FormStepTwo({ setScreen }) {
           </div>
 
           <div className="addressContent">
-            <div className="labelContent">
+            <div>
               <label> Cidade: </label>
               <input
                 name="City"
@@ -286,7 +286,7 @@ export default function FormStepTwo({ setScreen }) {
               />
             </div>
 
-            <div className="labelContent">
+            <div>
               <label> Estado: </label>
               <input
                 name="UF"
