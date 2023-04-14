@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "../../images/lazy-panda-logo.jpg"
+import Logo from "../../images/lazy-panda-logo.jpg";
 
-export default function Menu() {
+export default function() {
   return (
     <header>
         <div className="logo">
@@ -10,9 +10,9 @@ export default function Menu() {
 
         <div className="menu">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Forms</a></li>
+            <li><a href="/#homepage">Home</a></li>
+            <li><a href="/#test">About</a></li>
+            <li><a href="/form">Forms</a></li>
           </ul>
         </div>
     </header>

@@ -1,11 +1,24 @@
-import './App.css';
-import Form from './components/form/Form';
+import "./App.css";
+import Form from "./components/form/Form";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/form/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+
+  {
+    path: "/form",
+    element: <Form />,
+  },
+]);
 
 function App() {
-
   return (
     <div className="App">
-      <Form></Form>
+      <RouterProvider router={router} />
     </div>
   );
 }
