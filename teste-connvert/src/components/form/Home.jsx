@@ -3,6 +3,11 @@ import Menu from "./Menu";
 import SocialMedia from "./SocialMidia";
 import MyPhoto from "../../images/photo.png";
 import JediPanda from "../../images/jedi-panda.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
+import { faCss3Alt } from "@fortawesome/free-brands-svg-icons";
+import { faJs } from "@fortawesome/free-brands-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 
 export default function () {
   return (
