@@ -49,10 +49,18 @@ export default function () {
 
       <div className="bottom">
         <div className="bottomText">
-          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit..."
+          Copyright ©2023 | Designed by
+          <a
+            href="https://github.com/BecomePanda"
+            className="aFooter"
+            target="_blank"
+            title="BecomePanda"
+          >
+            {" "}
+            BecomePanda
+          </a>
         </div>
-        <div className="bottomText2">"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</div>
+        <div className="bottomText2">All Rights Reserved.</div>
       </div>
     </>
   );

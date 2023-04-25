@@ -29,7 +29,11 @@ export default function () {
       >
         <FontAwesomeIcon icon={faGithub} fontSize={28} />
       </a>
-      <a className="socialPannel" target="_blank" href="#">
+      <a
+        className="socialPannel"
+        target="_blank"
+        href="https://wa.me/5548996956707?text=Ol%C3%A1!%20"
+      >
         <FontAwesomeIcon icon={faWhatsapp} fontSize={28} />
       </a>
     </div>

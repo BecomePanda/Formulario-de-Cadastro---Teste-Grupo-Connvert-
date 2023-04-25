@@ -198,16 +198,26 @@ header {
   color: #f6ffff;
 }
 
-.a > link {
+.a:link {
   color: lightblue;
 }
 
-.a > hover {
+.a:hover {
   color: #fcfcfc;
 }
 
-.a > active {
+.a:active {
   color: #c0c0c0;
+}
+
+.aFooter {
+  color: #f6ffff;
+  text-decoration: none;
+  margin-left: 2px;
+}
+
+.aFooter:hover {
+  color: lightblue;
 }
 
 .button {
@@ -330,7 +340,7 @@ header {
   border-radius: 30px;
   text-decoration: none;
   width: 4vw;
-  transition: all 1s ease;
+  transition: all 1s ease-in;
   box-shadow: 0px 0px 5px 0px #bebfc7;
 }
 
@@ -435,5 +445,5 @@ header {
   font-style: italic;
   font-family: "Livvic", sans-serif;
   margin-top: 5px;
-  font-size: 10px;
+  font-size: 12px;
 }
