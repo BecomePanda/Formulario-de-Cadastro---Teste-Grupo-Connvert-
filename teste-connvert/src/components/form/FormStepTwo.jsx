@@ -153,7 +153,7 @@ export default function FormStepTwo({ setScreen }) {
   ];
 
   return (
-    <div className="area">
+    <div className="area2">
       <div className="title2">
         {" "}
         <div className="titleDiv">Me fale mais sobre você</div>
